@@ -7,10 +7,15 @@ public class Ave extends Animal{
     }
 
     public void mover() {
-        System.out.println("Peixe " + this.getNome() + "movendo ------>");
+        System.out.println("Ave " + this.getNome() + "movendo ------>");
         int localAtual = getLocalizacao();
         localAtual+= 5;
         super.setLocalizacao(localAtual);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Ave{"+ super.toString() + "}";
     }
 }
