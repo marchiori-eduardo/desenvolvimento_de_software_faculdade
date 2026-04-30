@@ -4,45 +4,46 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Menu menu = new Menu();
+        View view = new View();
         int entrada = 1;
 
-        ArrayList<Animal> animal = new ArrayList<>();
+        ArrayList<Animal> animaisList = new ArrayList<>();
 
 
         /*========== MENU ============*/
             System.out.println("Bem-vindo ao Cadastro de Animais");
 
         do{
-           menu.exibirMenuPrincipal();
+           view.exibirMenuPrincipal();
             entrada = sc.nextInt();
 
             switch (entrada){
                 case 1:
-                    animal.add(menu.cadastrarAnimal());
+                    animaisList.add(view.cadastrarAnimal());
                     System.out.println("Animal cadastrado com sucesso!\n" +
-                            "Temos " + animal.size() + " animais cadastrados.\n");
+                            "Temos " + animaisList.size() + " animais cadastrados.\n");
                     break;
 
                 case 2:
                     System.out.println("Listar Animais");
-                    if (!animal.isEmpty()){
-                        for (Animal a : animal) {
-                            System.out.println(a.toString());
-                        }
-                    } else {
-                        System.out.println("Nenhum Animal cadastrado!");
-
-                    }
+                    view.listarAnimais(animaisList);
                     break;
 
                 case 3:
+                    System.out.println("Mover Animal");
+                    view.moverAnimal(animaisList);
+
                     break;
 
                 case 4:
+                    System.out.println("Editar Animal");
+
+                    view.editarAnimal(animaisList);
+
                     break;
 
                 case 0:
+                    System.out.println("Saindo do programa...");
                     break;
                 default:
                     System.out.println("Opção inválida");

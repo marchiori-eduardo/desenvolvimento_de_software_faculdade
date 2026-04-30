@@ -7,7 +7,7 @@ public class Ave extends Animal{
     }
 
     public void mover() {
-        System.out.println("Ave " + this.getNome() + "movendo ------>");
+        System.out.println("Ave " + this.getNome() + " se movendo ------>");
         int localAtual = getLocalizacao();
         localAtual+= 5;
         super.setLocalizacao(localAtual);

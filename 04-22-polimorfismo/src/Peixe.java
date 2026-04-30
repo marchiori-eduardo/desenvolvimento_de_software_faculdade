@@ -22,7 +22,7 @@ public class Peixe extends Animal {
     }
 
     public void mover() {
-        System.out.println("Peixe " + this.getNome() + "movendo ------>");
+        System.out.println("Peixe " + this.getNome() + " se movendo ------>");
         int localAtual = getLocalizacao();
         localAtual+= 2;
         super.setLocalizacao(localAtual);
@@ -31,6 +31,7 @@ public class Peixe extends Animal {
     @Override
     public String toString() {
         return "Peixe{" +
+                super.toString() +
                 "tipoAgua=" + tipoAgua +
                 '}';
     }

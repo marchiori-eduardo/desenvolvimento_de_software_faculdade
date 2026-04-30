@@ -47,7 +47,7 @@ public class Animal {
     }
 
     public void mover() {
-        System.out.println("Animal " + this.nome + "se movendo ----->");
+        System.out.println("Animal " + this.nome + " se movendo ----->");
         this.localizacao++;
     }
 
